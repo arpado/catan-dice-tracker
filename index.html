@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="stat-wrapper">
+
+        <div id="control-section">
+            <p class="numbers-entered-section" id="nums-entered-descr">Bevitt számok:</p>
+            <p class="numbers-entered-section" id="nums-entered"></p>
+            <p class="numbers-entered-section" id="nums-stats-descr">Statisztikára megtartottak:</p>
+            <p class="numbers-entered-section" id="nums-stats"></p>
+            <button class="toggle-btn toggle-incr" id="incr-decr-button">Csökkent</button>
+            <button class="toggle-btn" id="reset-btn" type="reset">Reset</button>
+        </div>
+
+        <div id="media-grid">
+
+            <div id="stat-area" class="">
+                <div class="stat-box stat-box-small stat-box-large" id="b2x"></div>
+                <div class="stat-box stat-box-small stat-box-large" id="b3x"></div>
+                <div class="stat-box stat-box-small stat-box-large" id="b4x"></div>
+                <div class="stat-box stat-box-small stat-box-large" id="b5x"></div>
+                <div class="stat-box stat-box-small stat-box-large" id="b6x"></div>
+                <div class="stat-box stat-box-small stat-box-large" id="b7x"></div>
+                <div class="stat-box stat-box-small stat-box-large" id="b8x"></div>
+                <div class="stat-box stat-box-small stat-box-large" id="b9x"></div>
+                <div class="stat-box stat-box-small stat-box-large" id="b10x"></div>
+                <div class="stat-box stat-box-small stat-box-large" id="b11x"></div>
+                <div class="stat-box stat-box-small stat-box-large" id="b12x"></div>
+            </div>
+
+            <div id="stat-buttons">
+                <button value="2" class="incr-decr-btn incr" id="b2">2</button>
+                <button value="3" class="incr-decr-btn incr" id="b3">3</button>
+                <button value="4" class="incr-decr-btn incr" id="b4">4</button>
+                <button value="5" class="incr-decr-btn incr" id="b5">5</button>
+                <button value="6" class="incr-decr-btn incr" id="b6">6</button>
+                <button value="7" class="incr-decr-btn incr" id="b7">7</button>
+                <button value="8" class="incr-decr-btn incr" id="b8">8</button>
+                <button value="9" class="incr-decr-btn incr" id="b9">9</button>
+                <button value="10" class="incr-decr-btn incr" id="b10">10</button>
+                <button value="11" class="incr-decr-btn incr" id="b11">11</button>
+                <button value="12" class="incr-decr-btn incr" id="b12">12</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="results-page-wrapper">
+
+        <table id="results-table">
+            <!--<tr>
+                <th class="main-table-header" scope="col">Kapott</th>
+                <th class="main-table-header" scope="col">Elvart</th>
+            </tr> ezt at kene inkabb title-sorra majd-->
+            <thead>
+                <tr>
+                    <th scope="col">Számérték</th>
+                    <th scope="col">Hány alkalommal fordult elő</th>
+                    <th scope="col">Előfordulás aránya</th>
+                    <th scope="col">Elvárt előfordulás száma</th>
+                    <th scope="col">Elvárt előfordulási arány</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row">2</th>
+                    <td id="num-items2"></td>
+                    <td id="perc-items2"></td>
+                    <td id="num-items-shouldbe2"></td>
+                    <td class="static-perc2">2.8%</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td id="num-items3"></td>
+                    <td id="perc-items3"></td>
+                    <td id="num-items-shouldbe3"></td>
+                    <td class="static-perc3">5.6%</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td id="num-items4"></td>
+                    <td id="perc-items4"></td>
+                    <td id="num-items-shouldbe4"></td>
+                    <td class="static-perc4">8.3%</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td id="num-items5"></td>
+                    <td id="perc-items5"></td>
+                    <td id="num-items-shouldbe5"></td>
+                    <td class="static-perc5">11.1%</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td id="num-items6"></td>
+                    <td id="perc-items6"></td>
+                    <td id="num-items-shouldbe6"></td>
+                    <td class="static-perc6">13.9%</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td id="num-items7"></td>
+                    <td id="perc-items7"></td>
+                    <td id="num-items-shouldbe7"></td>
+                    <td class="static-perc7">16.7%</td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td id="num-items8"></td>
+                    <td id="perc-items8"></td>
+                    <td id="num-items-shouldbe8"></td>
+                    <td class="static-perc8">13.9%</td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td id="num-items9"></td>
+                    <td id="perc-items9"></td>
+                    <td id="num-items-shouldbe9"></td>
+                    <td class="static-perc9">11.1%</td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td id="num-items10"></td>
+                    <td id="perc-items10"></td>
+                    <td id="num-items-shouldbe10"></td>
+                    <td class="static-perc10">8.3%</td>
+                </tr>
+                <tr>
+                    <th scope="row">11</th>
+                    <td id="num-items11"></td>
+                    <td id="perc-items11"></td>
+                    <td id="num-items-shouldbe11"></td>
+                    <td class="static-perc11">5.6%</td>
+                </tr>
+                <tr>
+                    <th scope="row">12</th>
+                    <td id="num-items12"></td>
+                    <td id="perc-items12"></td>
+                    <td id="num-items-shouldbe12"></td>
+                    <td class="static-perc12">2.8%</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <button id="calc-btn">Mutasd a statisztikát!</button>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
